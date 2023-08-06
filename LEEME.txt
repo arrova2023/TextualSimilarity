@@ -1,0 +1,27 @@
+Este proyecto se enfoca en calcular la similitud textual entre dos textos: un texto original y un texto sospechoso. La similitud textual se calculará utilizando el índice de Jaccard, que mide la similitud entre dos conjuntos mediante la intersección y la unión de sus elementos.
+Requisitos
+
+Para ejecutar este proyecto, asegúrate de tener instalado Python 3.11 o una versión superior. También necesitarás la biblioteca spacy para realizar la lematización del texto. Puedes instalarla usando el siguiente comando:
+
+	pip install spacy
+
+Además, se requiere el archivo "stopwords.txt", que contiene una lista de palabras funcionales en español. Asegúrate de tener este archivo en la ruta "resources/stopwords.txt".
+Uso
+
+Coloca los textos original.txt y sospecho.txt en la carpeta "corpus/".
+
+Ejecución automática: Para ejecutar todo el proceso automáticamente, simplemente ejecuta el archivo "main.py" desde la línea de comandos usando el siguiente comando:
+
+	python main.py
+
+El script "main.py" realizará todas las tareas del proyecto, incluyendo el preprocesamiento de texto, la generación de corpus, la creación de matrices de comparación, el cálculo de similitud y entropía, así como el cálculo de temperatura y energía.
+
+Resultados: Una vez que se haya ejecutado el script "main.py", los resultados de cada etapa se guardarán en archivos de texto en la carpeta "scores/". En particular, los resultados de similitud se guardarán en "scores/similarity/similarity.res", los resultados de entropía en "scores/entropy/entropy.res", y los resultados de temperatura en "scores/temperature/temperature.res". Además, el resultado final de la similitud entre el texto original y el texto sospechoso se guardará en "scores/discerned/discerned.res".
+
+Notas adicionales
+
+    Si deseas ejecutar cada etapa por separado, puedes ejecutar los archivos correspondientes, como "lemmatize.py" para el preprocesamiento y lematización, "matrix.py" para crear la matriz de comparación, "entropy.py" para calcular la entropía, y "temperature.py" para calcular la temperatura.
+
+    Si necesitas cambiar las palabras funcionales (stopwords) utilizadas en el proyecto, puedes editar el archivo "stopwords.txt" en la carpeta "resources/".
+
+    Si deseas agregar más detalles o funcionalidades al proyecto, puedes explorar y modificar los archivos Python correspondientes. Los comentarios en el código te guiarán sobre su funcionamiento.
