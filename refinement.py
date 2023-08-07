@@ -30,7 +30,7 @@ if __name__ == "__main__":
     secuencia = generar_secuencia()
 
     for numero, (precision, cobertura) in enumerate(secuencia):
-        print(f"Número: {numero}, Precisión: {precision:.2f}%, Cobertura: {cobertura:.2f}%")
+        print(f"Cut Value: {numero}, Precision: {precision:.2f}%, Recall: {cobertura:.2f}%")
 
 
     

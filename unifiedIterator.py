@@ -27,6 +27,7 @@ def obtener_entropy_result():
         with open("scores/entropy/entropy.res", "r") as file:
             result = file.read().strip()
             entropy_result = float(result)
+            print(entropy_result)
             return entropy_result
     except (FileNotFoundError, ValueError):
         return None
@@ -48,6 +49,7 @@ def obtener_energy_min_result():
             return energy_min_result
     except (FileNotFoundError, ValueError):
         return None
+
 
 if __name__ == "__main__":
     archivo_corpus_filtrado = "corpus/corpus.csv"
@@ -115,4 +117,5 @@ with open("scores/set/scores.csv", "w", newline="", encoding="utf-8") as file:
     writer.writerow(["Score"])  # Escribir la cabecera
     for score in scores_min:
         writer.writerow([score])
+
 
