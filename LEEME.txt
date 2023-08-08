@@ -1,5 +1,16 @@
-Este proyecto se enfoca en calcular la similitud textual entre dos textos: un texto original y un texto sospechoso. La similitud textual se calculará utilizando el índice de Jaccard, que mide la similitud entre dos conjuntos mediante la intersección y la unión de sus elementos.
-Requisitos
+El corpus utilizado en este proyecto se encuentra en la siguiente ruta:
+
+	corpus/corpus.csv
+
+Este archivo CSV contiene los textos originales y sospechosos que serán utilizados para calcular la similitud textual. El corpus está estructurado con dos columnas:
+
+    Enunciado Original: Esta columna contiene los textos originales, que son los textos de referencia con los cuales se compararán los textos sospechosos.
+    
+    Enunciado Sospechoso: Esta columna contiene los textos sospechosos, que son los textos que se evaluarán para determinar su similitud con los textos originales.
+
+    Similar: Esta columna indica si los enunciados originales y sospechosos tienen el mismo significado o no. Esta información es utilizada como etiqueta de referencia para el cálculo de similitud y para entrenar modelos de Machine Learning, es un valor booleano.
+
+El objetivo es calcular la similitud entre los enunciados originales y los enunciados sospechosos utilizando técnicas de procesamiento de lenguaje natural y Machine Learning. Esta similitud nos permitirá comprender cuán cercanos están los textos y si comparten el mismo significado o contenido.
 
 Para ejecutar este proyecto, asegúrate de tener instalado Python 3.11 o una versión superior. También necesitarás la biblioteca spacy para realizar la lematización del texto. Puedes instalarla usando el siguiente comando:
 
@@ -10,18 +21,37 @@ Uso
 
 Coloca los textos original.txt y sospecho.txt en la carpeta "corpus/".
 
-Ejecución automática: Para ejecutar todo el proceso automáticamente, simplemente ejecuta el archivo "main.py" desde la línea de comandos usando el siguiente comando:
 
-	python main.py
+i deseas ejecutar el proyecto utilizando Python 3.10 en lugar de Python 3.11, puedes seguir estos pasos:
 
-El script "main.py" realizará todas las tareas del proyecto, incluyendo el preprocesamiento de texto, la generación de corpus, la creación de matrices de comparación, el cálculo de similitud y entropía, así como el cálculo de temperatura y energía.
+    * Abre una terminal en tu sistema operativo.
+    * Navega al directorio raíz del proyecto utilizando el comando cd ruta/del/proyecto.
+    * Para ejecutar el script linker.py con Python 3.10, utiliza el siguiente comando:
 
-Resultados: Una vez que se haya ejecutado el script "main.py", los resultados de cada etapa se guardarán en archivos de texto en la carpeta "scores/". En particular, los resultados de similitud se guardarán en "scores/similarity/similarity.res", los resultados de entropía en "scores/entropy/entropy.res", y los resultados de temperatura en "scores/temperature/temperature.res". Además, el resultado final de la similitud entre el texto original y el texto sospechoso se guardará en "scores/discerned/discerned.res".
+    	python3.10 linker.py
+
+Esto iniciará la secuencia de ejecución definida en el script linker.py, que incluye la generación de archivos y la ejecución de otros scripts según las necesidades del proyecto.
+Recuerda que Python 3.10 debe estar instalado en tu sistema para poder ejecutar el proyecto con esta versión.
 
 Notas adicionales
-
-    Si deseas ejecutar cada etapa por separado, puedes ejecutar los archivos correspondientes, como "lemmatize.py" para el preprocesamiento y lematización, "matrix.py" para crear la matriz de comparación, "entropy.py" para calcular la entropía, y "temperature.py" para calcular la temperatura.
 
     Si necesitas cambiar las palabras funcionales (stopwords) utilizadas en el proyecto, puedes editar el archivo "stopwords.txt" en la carpeta "resources/".
 
     Si deseas agregar más detalles o funcionalidades al proyecto, puedes explorar y modificar los archivos Python correspondientes. Los comentarios en el código te guiarán sobre su funcionamiento.
+
+Precisión: La precisión es una medida que evalúa la proporción de predicciones correctas realizadas por el modelo. En el contexto de este proyecto, representa la cantidad de elementos positivos correctamente identificados en relación con el total de elementos identificados como positivos.
+
+Cobertura: La cobertura es una medida que evalúa qué proporción de todos los elementos positivos existentes fueron identificados por el modelo. En el contexto del proyecto, la cobertura representa la cantidad de elementos positivos correctamente identificados en relación con el total de elementos positivos reales.
+
+Puntuación F1: La puntuación F1 es una medida que combina la precisión y la cobertura en una sola métrica, lo que brinda una evaluación más completa del rendimiento del modelo. Es especialmente útil cuando las clases están desequilibradas. Una puntuación F1 más alta indica un equilibrio entre precisión y cobertura.
+
+Cada una de estas medidas tiene su propia importancia en la evaluación de un modelo de similitud textual y proporciona información valiosa sobre su capacidad para identificar y clasificar correctamente los textos originales y sospechosos.
+
+Acerca de la Precisión, Cobertura y Futuras Actualizaciones
+
+Es importante tener en cuenta que, aunque el script refinement.py genera valores de precisión y cobertura, actualmente solo la precisión es calculada correctamente. La cobertura requiere ajustes adicionales para proporcionar resultados precisos. Estamos trabajando en mejorar y corregir este aspecto, y en las próximas semanas se lanzará una actualización que corregirá la cobertura y además incluirá la columna de puntuación F1 para brindar una evaluación más completa del modelo.
+Última Actualización del Año
+
+Queremos informarte que esta es la penúltima actualización programada para este año. Estamos comprometidos en continuar mejorando y actualizando el proyecto para ofrecer más funcionalidades, correcciones y mejoras en el futuro.
+
+Agradecemos tu interés en el proyecto y tu paciencia mientras trabajamos en las actualizaciones y mejoras. Si tienes alguna pregunta o comentario, no dudes en contactarnos. ¡Esperamos que encuentres útil y valioso este proyecto de similitud textual!
