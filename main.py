@@ -1,7 +1,7 @@
 import subprocess
 
 def run_script(script_name):
-    subprocess.run(["python3.11", script_name])
+    subprocess.run(["python3.10", script_name])
 
 def main():
     run_script("openInput.py")

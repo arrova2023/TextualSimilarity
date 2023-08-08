@@ -2,7 +2,7 @@ import subprocess
 
 def run_script(script_name):
     try:
-        subprocess.run(["python3.11", script_name], check=True)
+        subprocess.run(["python3.10", script_name], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error executing {script_name}: {e}")
 

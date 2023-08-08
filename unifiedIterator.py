@@ -27,7 +27,7 @@ def obtener_entropy_result():
         with open("scores/entropy/entropy.res", "r") as file:
             result = file.read().strip()
             entropy_result = float(result)
-            print(entropy_result)
+            #print(entropy_result)
             return entropy_result
     except (FileNotFoundError, ValueError):
         return None
@@ -80,7 +80,7 @@ if __name__ == "__main__":
             sospechoso_file.write(score_sospechoso)
 
         # Ejecutar matrix.py para obtener el resultado de energy.res
-        subprocess.run(["python3.11", "matrix.py"])
+        subprocess.run(["python3.10", "matrix.py"])
 
         # Obtener el resultado de energy.res y almacenarlo en el array scores_energy
         energy_result = obtener_energy_result()
@@ -88,7 +88,7 @@ if __name__ == "__main__":
             scores_energy.append(energy_result)
 
         # Ejecutar id3.py para obtener el resultado de entropy.res
-        subprocess.run(["python3.11", "id3.py"])
+        subprocess.run(["python3.10", "id3.py"])
 
         # Obtener el resultado de entropy.res y almacenarlo en el array scores_entropy
         entropy_result = obtener_entropy_result()
@@ -96,7 +96,7 @@ if __name__ == "__main__":
             scores_entropy.append(entropy_result)
 
         # Ejecutar temperature.py para obtener el resultado de temperature.res
-        subprocess.run(["python3.11", "temperature.py"])
+        subprocess.run(["python3.10", "temperature.py"])
 
         # Obtener el resultado de temperature.res y almacenarlo en el array scores_temperature
         temperature_result = obtener_temperature_result()
@@ -104,7 +104,7 @@ if __name__ == "__main__":
             scores_temperature.append(temperature_result)
 
         # Ejecutar energyMin.py para obtener el resultado de similarity.res
-        subprocess.run(["python3.11", "energyMin.py"])
+        subprocess.run(["python3.10", "energyMin.py"])
 
         # Obtener el resultado de similarity.res y almacenarlo en el array scores_min
         energy_min_result = obtener_energy_min_result()
