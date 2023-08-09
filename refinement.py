@@ -36,6 +36,6 @@ if __name__ == "__main__":
         writer.writerow(["Cut Value", "Precision", "Recall"])
         for numero, (precision, cobertura) in enumerate(secuencia):
             writer.writerow([numero, precision, cobertura])
-            print(f"Cut Value: {numero}, Precision: {precision:.2f}%, Recall: {cobertura:.2f}%")
+            #print(f"Cut Value: {numero}, Precision: {precision:.2f}%, Recall: {cobertura:.2f}%")
 
     print(f"Resultados guardados en '{archivo_salida}'")

@@ -55,3 +55,4 @@ Es importante tener en cuenta que, aunque el script refinement.py genera valores
 Queremos informarte que esta es la penúltima actualización programada para este año. Estamos comprometidos en continuar mejorando y actualizando el proyecto para ofrecer más funcionalidades, correcciones y mejoras en el futuro.
 
 Agradecemos tu interés en el proyecto y tu paciencia mientras trabajamos en las actualizaciones y mejoras. Si tienes alguna pregunta o comentario, no dudes en contactarnos. ¡Esperamos que encuentres útil y valioso este proyecto de similitud textual!
+
